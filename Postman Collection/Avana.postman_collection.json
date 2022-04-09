@@ -1,0 +1,517 @@
+{
+	"info": {
+		"_postman_id": "064e8ece-56a7-455c-97fa-0bc28e717089",
+		"name": "Avana",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Create Customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/avanatest/customer/create?name=user1&email=user1@gmail.com&phone_number=1111",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"avanatest",
+								"customer",
+								"create"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "user1"
+								},
+								{
+									"key": "email",
+									"value": "user1@gmail.com"
+								},
+								{
+									"key": "phone_number",
+									"value": "1111"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/avanatest/customer/show/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"avanatest",
+								"customer",
+								"show",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/avanatest/customer?limit=3&offset=0",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"avanatest",
+								"customer"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "3"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/avanatest/customer/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"avanatest",
+								"customer",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"user 1 no edit xx\",\n    \"phone_number\" : \"7777\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/avanatest/customer/edit/user1@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"avanatest",
+								"customer",
+								"edit",
+								"user1@gmail.com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Create Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"order_date\" : \"2022-04-08\",\n    \"email\" : \"user1@gmail.com\",\n    \"discount\" : \"2022-04-08\",\n    \"amount_paid\" : 4000,\n    \"details\" : [\n        {\n            \"item_id\" : \"1\",\n            \"qty\" : \"2\",\n            \"price\" : \"1000\",\n            \"discount\" : \"200\",\n            \"total\" : \"1800\"\n        },\n        {\n            \"item_id\" : \"11\",\n            \"qty\" : \"2\",\n            \"price\" : \"2000\",\n            \"discount\" : \"500\",\n            \"total\" : \"3500\"\n        },\n        {\n            \"item_id\" : \"111\",\n            \"qty\" : \"2\",\n            \"price\" : \"3000\",\n            \"discount\" : \"1000\",\n            \"total\" : \"5000\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/avanatest/order/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"avanatest",
+								"order",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"order_date\" : \"2022-04-05\",\n    \"email\" : \"user1@gmail.com\",\n    \"discount\" : \"2022-04-04\",\n    \"amount_paid\" : 5300,\n    \"details\" : [\n        {\n            \"item_id\" : \"1\",\n            \"qty\" : \"2\",\n            \"price\" : \"1000\",\n            \"discount\" : \"200\",\n            \"total\" : \"1800\"\n        },\n        {\n            \"item_id\" : \"11\",\n            \"qty\" : \"2\",\n            \"price\" : \"2000\",\n            \"discount\" : \"500\",\n            \"total\" : \"3500\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/avanatest/order/edit/42",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"avanatest",
+								"order",
+								"edit",
+								"42"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/avanatest/order/delete/42",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"avanatest",
+								"order",
+								"delete",
+								"42"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/avanatest/order?limit=3&offset=0",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"avanatest",
+								"order"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "3"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order Detail",
+			"item": [
+				{
+					"name": "Create Order Detail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"order_id\": \"43\",\n    \"item_id\": \"1\",\n    \"qty\": \"1\",\n    \"price\": \"300\",\n    \"discount\": \"0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/avanatest/order-detail/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"avanatest",
+								"order-detail",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/avanatest/order-detail?limit=3&offset=0",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"avanatest",
+								"order-detail"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "3"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Order Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/avanatest/order-detail/show/34",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"avanatest",
+								"order-detail",
+								"show",
+								"34"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"item_id\": \"112\",\n    \"qty\": \"1\",\n    \"price\": \"200\",\n    \"discount\": \"0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/avanatest/order-detail/edit/37",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"avanatest",
+								"order-detail",
+								"edit",
+								"37"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/avanatest/order-detail/delete/34",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"avanatest",
+								"order-detail",
+								"delete",
+								"34"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment",
+			"item": [
+				{
+					"name": "Create Payment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/avanatest/payment/create?order_id=44&amount_paid=3000&payment_date=2022-04-09",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"avanatest",
+								"payment",
+								"create"
+							],
+							"query": [
+								{
+									"key": "order_id",
+									"value": "44"
+								},
+								{
+									"key": "amount_paid",
+									"value": "3000"
+								},
+								{
+									"key": "payment_date",
+									"value": "2022-04-09"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/avanatest/payment?limit=3&offset=0",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"avanatest",
+								"payment"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "3"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount_paid\" : 9000,\n    \"payment_date\" : \"2022-04-07\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/avanatest/payment/edit/10",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"avanatest",
+								"payment",
+								"edit",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/avanatest/payment/delete/9",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"avanatest",
+								"payment",
+								"delete",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
