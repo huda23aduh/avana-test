@@ -1,0 +1,33 @@
+{
+    "name": "avanahuda/avanatest",
+    "description": "huda's avana test",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Avanahuda\\Avanatest\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "Tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "huda",
+            "email": "huda23aduh@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Avanahuda\\Avanatest\\Providers\\TestServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9.5.x-dev",
+        "orchestra/testbench": "^6.0"
+    }
+}
