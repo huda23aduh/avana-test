@@ -6,6 +6,7 @@ CONTENTS OF THIS FILE
  * Introduction
  * Requirements
  * Installation
+ * Hint
 
  INTRODUCTION
 ------------
@@ -33,3 +34,8 @@ This project is part of avana's recruitment process
 This project use laravel default port (8000)
 #### End ###
 
+ HINT
+------------
+- if you need postman collection. You can find on 'Postman Collection\Avana.postman_collection.json'
+- if you want to know the asnwer of Test #1, You can find on 'Assignment Answer\q_avana.sql'
+- if you want to know the asnwer of Test #0, You can find on 'Assignment Answer\Hackerrank huda score.jpeg'
